@@ -1,19 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div class="flex items-center justify-center">
-      <h1 class="text-5xl bg-red-500 ">sjlkjd'dw</h1>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury vet clinic</title>
+</head>
+<body class="w-full h-screeen font-serif overflow-x-hidden">
+  <header class="w-full fixed bg-black text-sky-100 z-10 opacity-80">
+    <div class="flex items-center justify-between mx-5 my-3 md:mx-10 md:my-2">
+      <img src="img\logo\logo-transp.png" alt="Company Logo" class="h-14 md:h-20 w-fit aspect-auto object-center ">
+      <button id="menuButton" class="text-4xl md:hidden">
+        <i class="fa fa-bars"></i>
+      </button>
       <div>
-        <h2 class="text-7xl bg-violet-800">Vanyaa</h2>
+        <ul id="menu" class="hidden md:space-x-10 md:flex">
+          <li class="nav-li font-semibold" href="">Service</li>
+          <li class="nav-li font-semibold" href="">Store</li>
+          <li class="nav-li font-semibold" href="">About us</li>
+          <li class="nav-li font-semibold" href="">Contact us</li>
+          <li class="nav-li font-semibold" href="pages\login.html">Profile</li>
+      </ul>
       </div>
     </div>
-    <!-- <div id="app"></div> -->
-    <script type="module" src="/main.js"></script>
-  </body>
+    <!--mobile menu-->
+    <div id="mobileMenu" class="bg-black p-10 md:hidden">
+      <ul class="flex flex-col space-y-4 items-center justify-center">
+        <li class="nav-mob font-semibold" href="">Service</li>
+        <li class="nav-mob font-semibold" href="">Store</li>
+        <li class="nav-mob font-semibold" href="">About us</li>
+        <li class="nav-mob font-semibold" href="">Contact us</li>
+        <li class="nav-mob font-semibold" href="pages\login.html">Profile</li>
+    </ul>
+    </div>
+  </header>
+  <main>
+    <section class="relative flex justify-end items-end">
+      <img src="img/cocker.jpg" alt="Cocker-Header-Img" class="w-full object-cover bg-no-repeat brightness-75 opacity-90">
+      <section class="absolute flex flex-col items-center justify-cente md:mb-96 md:mx-10 p-6 back">
+        <h1 class="md:h1 text-[#203754] my-2 text-2xl  font-bold backdrop-contrast-100 md:filter-none">Help our furry friends find their home!</h1>
+        <div class="flex gap-8 mt-2 md:mt-4 md:mb-4">
+          <button class="button transition">Adopt now</button>
+          <button class="button transition">Login/Register</button>
+        </div>
+      </section>
+      <img src="img/wave-haikei1.png" alt="Wave" class="absolute bottom-0 left-0 w-full h-96  bg-transparent">
+    </section>
+    <section class="flex flex-col md:flex-row items-center mt-10 mx-5 md:mx-16 gap-10 md:gap-32 bg-sky-50 rounded-3xl p-5 md:p-10 shadow-[#203754] shadow-2xl">
+      <div class="flexColStart">
+        <h2 class="h2">The place where your pet's health comes first!</h2>
+        <p class="p indent-4">We understand that your pet is more than just an animal - it's a member of the family. Our team of experienced veterinarians and specialists are here to provide the best care and attention to your pet, whether it's a routine check-up, emergency care or specialized treatment.</p>
+      </div>
+      <div>
+        <img 
+          src="\img\Caring Cocker Spaniel_ Ears Ready for Healing.jpg"
+          alt="cocker-doc"
+          class="w-96 object-cover lg:w-full lg:h-full rounded-3xl shadow-[#203754] shadow-2xl"
+        >
+      </div>
+    </section>
+    <section class="flex justify-center items-center mx-16 mt-64">
+      <div class="flex flex-col absolute z-10 section">
+        <h2 class="flex justify-center text-4xl text-[#203754] font-bold mb-8">Book Appointment</h2>
+        <div class="flex justify-center items-center space-x-44">
+          <select name="Day" class="button" required>
+            <option value="" disabled selected>Select a day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          <select name="Hour" class="button" required>
+            <option value="" disabled selected>Select hour</option>
+            <option value="hour">8:00 am</option>
+            <option value="hour">9:00 am</option>
+            <option value="hour">10:00 am</option>
+            <option value="hour">11:00 am</option>
+            <option value="hour">12:00 am</option>
+            <option value="hour">13:00 pm</option>
+            <option value="hour">14:00 pm</option>
+            <option value="hour">15:00 pm</option>
+            <option value="hour">16:00 pm</option>
+            <option value="hour">17:00 pm</option>
+            <option value="hour">18:00 pm</option>
+            <option value="hour">19:00 pm</option>
+            <option value="hour">20:00 pm</option>
+          </select>
+          <select name="specialist" class="button" required>
+            <option value="" disabled selected>Select a specialist</option>
+            <option value="Specialist 1">Amanda Willson</option>
+            <option value="Specialist 2">John Snow</option>
+            <option value="Specialist 3">Deneris Tagerien</option>
+          </select>
+          <div>
+            <button class="button">Book</button>
+          </div>
+      </div>
+    </section>
+    <section class="flex flex-col relative items-center pt-52  justify-center bg-[#000000a5]">
+      <div class="flex items-center mb-24">
+        <img src="img\logo\logo-transp.png" alt="Company Logo" class="h-14 md:h-28 w-fit aspect-auto object-center mr-5">
+        <p class="text-4xl font-bold text-[#ffffff] ">Limitless Consultations, Limitless Health</p>
+        <img src="img\logo\logo-transp.png" alt="Company Logo" class="h-14 md:h-28 w-fit aspect-auto object-center ml-5">
+      </div>
+      <div class="flex flex-row justify-center ">
+        <div class="p-10 rounded-3xl bg-[#1c2228]">
+          <p class="text-2xl font-bold text-sky-100">3 Monthly Membership</p>
+          <h2 class="mb-10 text-4xl font-bold text-sky-200 p-2 border-b">69,99 $</h2>
+          <p class="mb-4 text-xl text-sky-100 ">Inclusive of:</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">Free Consultation</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">15% off on Petcare & Medical services</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">10% off on Pharmacy</p>
+          <p class="bookmark mb-10"><img src="\img\5584701.png" class="w-10" alt="tik">Messaging access</p>
+          <button class="button w-28">Choose</button>
+        </div>
+        <div class="p-10 rounded-3xl bg-[#1c2228]">
+          <p class="text-2xl font-bold text-sky-100">6 Monthly Membership</p>
+          <h2 class="mb-10 text-4xl font-bold text-sky-200 p-2 border-b">119,99 $</h2>
+          <p class="mb-4 text-xl text-sky-100 ">Inclusive of:</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">Free Consultation</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">15% off on Petcare & Medical services</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">10% off on Pharmacy</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">Messaging access</p>
+          <p class="bookmark mb-10"><img src="\img\5584701.png" class="w-10" alt="tik">Digital Coupons</p>
+          <button class="button w-28">Choose</button>
+        </div>
+        <div class="p-10 rounded-3xl bg-[#1c2228]">
+          <p class="text-2xl font-bold text-sky-100">Annual Membership</p>
+          <h2 class="mb-10 text-4xl font-bold text-sky-200 p-2 border-b">159,99 $</h2>
+          <p class="mb-4 text-xl text-sky-100 ">Inclusive of:</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">Free Consultation</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">15% off on Petcare & Medical services</p>
+          <p class="bookmark"><img src="\img\5584701.png" class="w-10" alt="tik">10% off on Pharmacy</p>
+          <p class="bookmark mb-10"><img src="\img\5584701.png" class="w-10" alt="tik">Messaging access</p>
+          <button class="button w-28">Choose</button>
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
 </html>
